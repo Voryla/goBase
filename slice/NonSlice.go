@@ -19,7 +19,10 @@ func main() {
 	var slice3 = *new([]int)
 	fmt.Println(nil == slice3)
 	fmt.Println(slice2, slice3)
-
+	slice2 = append(slice2, 2, 2)
+	slice3 = append(slice3, 3, 3)
+	fmt.Println(slice2)
+	fmt.Println(slice3)
 	/*
 		- 空切片
 		空切片的长度和容量也都为`0`，但是和`nil`的比较结果为`false`，因为所有的空切片的数据指针都指向同一个地址 `0xc42003bda0`；使用字面量、`make`可以创建空切片：
@@ -30,4 +33,8 @@ func main() {
 	fmt.Println(nil == slice5)
 	fmt.Printf("%p\n", slice5)
 	fmt.Printf("%p", slice4)
+	slice4 = append(slice4, 4, 4)
+	slice5 = append(slice5, 5, 5)
+	fmt.Println(slice4)
+	fmt.Println(slice5)
 }
