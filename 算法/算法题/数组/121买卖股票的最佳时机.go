@@ -2,7 +2,7 @@ package aboutArray
 
 import "math"
 
-func main() {
+func t1main() {
 	println(maxProfit([]int{7, 1, 5, 3, 6, 4}))
 }
 
