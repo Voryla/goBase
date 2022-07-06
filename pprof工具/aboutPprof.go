@@ -1,17 +1,29 @@
 package main
 
 import (
+	"fmt"
 	_ "net/http/pprof"
 )
 
+type A1 struct {
+	W int
+}
+
 func main() {
-	//if err := http.ListenAndServe(":6060", nil); err != nil {
+	//m := make(map[string]string)
+	//m["z"] = "w"
+	//s := m["z"]
+	//fmt.Println(s)
+	//if err := http.ListenAndServe(":8080", nil); err != nil {
 	//	log.Fatalln(err)
 	//}
-	sliInt := make([]int, 1024*8)
-	sliInt64 := make([]int64, 1024*8)
-	_ = sliInt[0]
-	_ = sliInt64[0]
-	//sli1 := make([]int8, 1024*8*2)
-	//_ = sli1[0]
+	a := 0xff
+	fmt.Printf("%v", a)
+	b := -8
+	fmt.Printf("%x\n", b)
+	c := A1{3}
+	fmt.Printf("%%", c)
+	d := make([]int, 2)
+	d[0] = 1
+	fmt.Println(d[0:0])
 }
